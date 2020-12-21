@@ -1,5 +1,5 @@
 const path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -15,36 +15,37 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          //loader: ['babel-loader', 'eslint-loader'],
           options: {
-              presets: ['@babel/preset-react']
+            presets: ['@babel/preset-react']
           }
-        } 
+        }
       },
       {
         test: /\.css$/,
         use: [
-            "style-loader",
-            "css-loader"
+          "style-loader",
+          "css-loader"
         ]
-    },
-    {
-      test: /\.(png|jpe?g|gif|svg)$/i,
-      use: [
-        {
-          loader: 'file-loader',
-        },
-      ],
-    },
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './index.html'
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({template: './index.html'})
+  ],
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     port: 9000,
     hot: true,
-    open: true
+    open: true,
   },
 }

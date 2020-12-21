@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import greetingImage from './images/greeting.gif'
+import Input from './components/input/Input.js'
 
-class App extends Component {
-    render() {
-        return (
-            <div className="wrap">
-                <div className="logotype">
-                    <img src={greetingImage} alt="greeting"/>
-                </div>
-                <h1>Let's do React!</h1>
-                <h2>End have a nice day!</h2>
+import Test from './components/test/Test.js'
+
+function App() {
+    return (
+        <div className="wrap">
+            <div className="logotype">
+                <img src={greetingImage} alt="greeting" />
             </div>
-        );
-    }
+            <h1>Make a shopping list now!</h1>
+            <Input />
+        </div>
+    )
+
 }
 
-export default App;
+export default App
