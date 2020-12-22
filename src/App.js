@@ -1,8 +1,6 @@
 import React from 'react';
 import greetingImage from './images/greeting.gif'
-import Input from './components/input/Input.js'
-
-import Test from './components/test/Test.js'
+import Form from './components/form/Form.js'
 
 function App() {
     return (
@@ -10,11 +8,10 @@ function App() {
             <div className="logotype">
                 <img src={greetingImage} alt="greeting" />
             </div>
-            <h1>Make a shopping list now!</h1>
-            <Input />
+            <h1>Make a shopping list!</h1>
+            <Form />
         </div>
     )
-
 }
 
 export default App

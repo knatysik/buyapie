@@ -1,0 +1,12 @@
+li label {
+    color: red;
+}
+li label.done {
+    text-decoration: line-through;
+    color: grey;
+}
+li img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
